@@ -3,7 +3,6 @@ const Component2 = ()=>{
     return (
         <div>
             HEY I AM DIV
-
         </div>
     )
 }
