@@ -1,10 +1,10 @@
 
-const Component2 = ()=>{
+const Component2 = React.memo((children, onClick)=>{
     return (
         <div>
             HEY I AM DIV
         </div>
     )
-}
+})
 
 export default Component2

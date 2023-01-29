@@ -20,7 +20,7 @@ function App() {
   },[is_clicked2])
   useEffect(()=>{
     console.log("useEffect is used")
-  },[is_clicked]) 
+  },[is_clicked2]) 
   return (
     <>
     <h1>{result}</h1>
