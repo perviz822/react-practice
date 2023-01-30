@@ -4,6 +4,10 @@ import Component1 from './Components/Component1';
 import Component2 from './Components/Component2';
 import { useCallback, useEffect } from 'react';
 import { useState ,useMemo} from 'react';
+import ParentComponent from './Components/UseCallback';
+import Contact from './Components/Contact';
+import {Link,Route,Routes} from 'react-router-dom';
+import About from  './Components/About'
 
 function App() {
   const [is_clicked,set_is_clicked] =  useState(false);
@@ -28,9 +32,21 @@ function App() {
   },[is_clicked2]) 
   return (
     <>
+    <Routes>
+     <Route path = "/contact" element ={<Contact/>} />  
+    <Route path = "/about/*" element ={<About/>} />
+   </Routes>
     <h1>{result}</h1>
+    <Link to="/contact"> contact</Link>
+    <Link to='/about'>about</Link>
     <Component1 is_clicked2={is_clicked2} is_clicked = {is_clicked} set_is_clicked2={set_is_clicked2} set_is_clicked={set_is_clicked} />
     {is_clicked &&  <Component2/>}
+
+    <ParentComponent></ParentComponent>
+   
+
+
+    
     </>
   )
    
