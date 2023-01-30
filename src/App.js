@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Component1 from './Components/Component1';
 import Component2 from './Components/Component2';
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useState ,useMemo} from 'react';
 
 function App() {
@@ -18,6 +18,11 @@ function App() {
     }
     return sum;
   },[is_clicked2])
+
+
+
+
+
   useEffect(()=>{
     console.log("useEffect is used")
   },[is_clicked2]) 
